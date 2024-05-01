@@ -93,21 +93,14 @@ function displayData(data) {
   });
 }
 
-// function displayData(data) {
-//   const notesContainer = document.getElementById("notes-container");
-//   notesContainer.innerHTML = "";
+function createObject(name, surname, price, residence, city) {
+  return {
+    name,
+    surname,
+    price,
+    residence,
+    city,
+  };
+}
 
-//   data.forEach((apartment) => {
-//     const apartmentDiv = document.createElement("div");
-//     apartmentDiv.textContent = `Ім'я: ${apartment.name},
-//      Прізвище: ${apartment.surname},
-//      Ціна: ${apartment.price},
-//      Місце: ${apartment.residence}`;
-
-//     const img = document.createElement("img");
-//     img.src = "data:image/jpeg;base64," + apartment.photoBase64;
-//     apartmentDiv.appendChild(img);
-
-//     notesContainer.appendChild(apartmentDiv);
-//   });
-// }
+module.exports = createObject;

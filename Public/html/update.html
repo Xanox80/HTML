@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оновлення апартаменту</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("https://kartinki.pics/uploads/posts/2022-02/1645826034_1-kartinkin-net-p-kartinki-pro-leto-krasivie-1.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+      }
+
+      .container {
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      input[type="file"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      button[type="submit"] {
+        width: 100%;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Оновлення апартаменту</h1>
+      <form id="updateApartmentForm">
+        <label for="apartmentId">ID апартаменту:</label>
+        <input type="text" id="apartmentId" required />
+
+        <label for="nameVilla">Ім'я:</label>
+        <input type="text" id="nameVilla" required />
+
+        <label for="surnameVilla">Прізвище:</label>
+        <input type="text" id="surnameVilla" required />
+
+        <label for="price">Ціна:</label>
+        <input type="number" id="price" required />
+
+        <label for="residence">Кількість кімнат:</label>
+        <input type="text" id="residence" required />
+
+        <label for="city">Місце знаходження:</label>
+        <input type="text" id="city" required />
+
+        <label for="photo">Фото:</label>
+        <input type="file" id="photo" accept="image/*" />
+
+        <button type="submit">Оновити</button>
+      </form>
+    </div>
+
+    <script src="../src/update.js"></script>
+  </body>
+</html>

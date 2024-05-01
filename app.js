@@ -15,7 +15,9 @@ app.use(express.static(path.join(__dirname, "Public")));
 app.use("/api", appealRouter);
 app.use("/api/apartments", appealRouter);
 app.use("/images", express.static("./images"));
+app.use("/api/delete", appealRouter);
+app.use("/api/update", appealRouter);
 
 app.listen(port, () => {
-  console.log(`Server started on http://localhost:${port}/Golovna.html`);
+  console.log(`Server started on http://localhost:${port}/html/Golovna.html`);
 });
