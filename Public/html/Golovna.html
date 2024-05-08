@@ -1,16 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ласкаво просимо на сайт нерухомості</title>
     <link rel="stylesheet" href="../css/golovna.css" />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      .parallax-container {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .parallax-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://images.pexels.com/photos/5997994/pexels-photo-5997994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        filter: grayscale(50%);
+        transform: scale(1.1);
+        transition: transform 0.5s ease;
+        animation: parallaxMovement 20s infinite alternate linear;
+      }
+
+      @keyframes parallaxMovement {
+        0% {
+          transform: scale(1.1) translateY(-20px);
+        }
+        100% {
+          transform: scale(1.1) translateY(20px);
+        }
+      }
+
+      .parallax-content {
+        text-align: center;
+        color: white;
+        z-index: 1;
+      }
+
+      .parallax-content h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      .parallax-content p {
+        font-size: 1.5rem;
+      }
+
+      nav {
+        text-align: center;
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .section {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      #getDataButton {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      #getDataButton:hover {
+        background-color: #45a049;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <h1>Ласкаво просимо на сайт нерухомості</h1>
-      <p>Знайдіть ідеальний будинок або квартиру для себе</p>
-    </header>
+    <div class="parallax-container">
+      <div class="parallax-background"></div>
+      <div class="parallax-content">
+        <h1>Ласкаво просимо на сайт нерухомості</h1>
+        <p>Знайдіть ідеальний будинок або квартиру для себе</p>
+      </div>
+    </div>
 
     <nav>
       <ul>
@@ -24,7 +124,6 @@
       <button id="getDataButton" type="button">Переглянути Квартири</button>
       <div id="notes-container"></div>
     </section>
-
     <script src="../src/create.js"></script>
   </body>
 </html>
