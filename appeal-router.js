@@ -2,7 +2,6 @@ const express = require("express");
 const Appeal = require("./model");
 
 const router = express.Router();
-const path = require("path");
 
 router.post("/create", async (req, res) => {
   try {
